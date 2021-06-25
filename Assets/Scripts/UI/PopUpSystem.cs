@@ -6,22 +6,31 @@ using UnityEngine;
 
 public class PopUpSystem : MonoBehaviour
 {
-    public GameObject popUpBox;
-    public Animator animator;
     public TMP_Text popUpText;
+    private Animator myAnimator;
+    private bool outo = false;
 
+    void Start(){
+        myAnimator = transform.GetComponent<Animator>();
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab)){
-            Debug.Log("came in here " );
-            PopUp("test");
-            }
+        
     }
 
-    public void PopUp(string text)
+    public void TextIn(string text)
     {
-        popUpBox.SetActive(true);
+        
+        Debug.Log("came in here 222" );
         popUpText.text = text;
-        animator.SetTrigger("pop");
+    }
+    public void SelfDestruct(){
+        Debug.Log("boom");
+        Destroy(gameObject);
+    }
+    public void PopDown()
+    {
+        Debug.Log("came in here 333");
+        myAnimator.Play("ReversePop");
     }
 }
