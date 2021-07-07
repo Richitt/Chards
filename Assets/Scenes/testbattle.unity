@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 1028008979}
   - component: {fileID: 1028008980}
   m_Layer: 5
-  m_Name: Overlay-Canvas
+  m_Name: BattleInterface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1249672436}
   - component: {fileID: 1249672437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,8 +462,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 682945015
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d3a3af2c9d318e14e80cf75025f600ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -692,7 +692,6 @@ GameObject:
   - component: {fileID: 1496617923}
   - component: {fileID: 1496617922}
   - component: {fileID: 1496617924}
-  - component: {fileID: 1496617925}
   m_Layer: 0
   m_Name: BattleScreen
   m_TagString: Untagged
@@ -739,7 +738,7 @@ SpriteRenderer:
   m_SortingLayerID: 794388451
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 48d507ae62a0113438d41d6f44668dec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 628e34539faf4d14abee96e2c6d1ff5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -776,16 +775,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997efc68b85e7f244a48d7b369014f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1496617925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496617921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac78193303720944bb5c69e466f0164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpText: {fileID: 0}
