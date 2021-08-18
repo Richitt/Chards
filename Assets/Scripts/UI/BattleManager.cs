@@ -7,11 +7,17 @@ public class BattleManager : MonoBehaviour
     private GameObject selectedTarget;
     public GameObject[] enemies;
     private int selector;
-    public GameObject player;
+    public GameObject[] players;
     // Start is called before the first frame update
     void Start()
     {
         selector = -1;
+        foreach (GameObject player in players){
+            Instantiate(player);
+        }
+        foreach (GameObject enemy in enemies){
+            Instantiate(enemy);
+        }
     }
 
     // Update is called once per frame
