@@ -6,6 +6,7 @@ public class BattleManager : MonoBehaviour
 {
     private GameObject selectedTarget;
     public GameObject[] enemies;
+    public GameObject[] targetEnemies;
     private int selector;
     public GameObject[] players;
     // Start is called before the first frame update
@@ -30,8 +31,8 @@ public class BattleManager : MonoBehaviour
 
     private void selectTarget(){
         selector++;
-        if (enemies.Length == 0){
-            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (targetEnemies.Length == 0){
+            targetEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         }
         selectedTarget = enemies[selector];
         Debug.Log(selectedTarget.name);
