@@ -8,11 +8,16 @@ public class Player : MonoBehaviour
     public GameObject timingBar;
     public bool slashstart;
     private IEnumerator coroutine;
+    public GameObject[] enemies  = new GameObject[0];
+    private int selector;
 
+    private GameObject selectedTarget;
     private string currentAnimation;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        selector = -1;
+        enemies = this.transform.parent.GetComponent<BattleManager>().existingEnemies();
         animator = GetComponent<Animator>();
         slashstart = false;
     }
@@ -31,7 +36,11 @@ public class Player : MonoBehaviour
                 //StartCoroutine(coroutine);
                 slashstart = false;
                 }
-            }
+        }
+        
+       if(Input.GetKeyDown(KeyCode.A)){
+           selectTarget();
+       }
     }
 
     public void StartAttack(){
@@ -50,5 +59,20 @@ public class Player : MonoBehaviour
 
         animator.Play(newAnimation);
         currentAnimation = newAnimation;
+    }
+    public GameObject returnTarget(){
+        return selectedTarget;
+    }
+
+    private void selectTarget(){
+        selector++;
+        if(selector > enemies.Length-1){
+            selector = 0;
+        }
+        //if (targetEnemies.Length == 0){
+            //targetEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //}
+        selectedTarget = enemies[selector];
+        Debug.Log(selectedTarget.name);
     }
 }

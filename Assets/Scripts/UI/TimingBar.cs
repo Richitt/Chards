@@ -27,7 +27,7 @@ public class TimingBar : MonoBehaviour
     }
     private void checkAttack(bool yay){
         if(yay){
-            transform.parent.position = new Vector3(transform.parent.position.x - 8, transform.parent.position.y, transform.parent.position.z);
+            transform.parent.position = new Vector3(Playero.returnTarget().transform.position.x+1, Playero.returnTarget().transform.position.y+1, Playero.returnTarget().transform.position.z);
             Playero.PlayAnimation("SolaSlashFollow");
         }
     }

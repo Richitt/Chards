@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    private GameObject selectedTarget;
     public GameObject[] enemies;
-    public GameObject[] targetEnemies;
     private int selector;
     public GameObject[] players;
     // Start is called before the first frame update
@@ -14,27 +12,21 @@ public class BattleManager : MonoBehaviour
     {
         selector = -1;
         foreach (GameObject player in players){
-            Instantiate(player);
+            var p = Instantiate(player);
+            p.transform.parent = gameObject.transform;
         }
         foreach (GameObject enemy in enemies){
-            Instantiate(enemy);
+            var e = Instantiate(enemy);
+            e.transform.parent = gameObject.transform;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.A)){
-           selectTarget();
-       }
     }
-
-    private void selectTarget(){
-        selector++;
-        if (targetEnemies.Length == 0){
-            targetEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        }
-        selectedTarget = enemies[selector];
-        Debug.Log(selectedTarget.name);
+    public GameObject[] existingEnemies(){
+        //return existing enemies;
+        return this.enemies;
     }
 }
