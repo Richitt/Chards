@@ -75,4 +75,11 @@ public class Player : MonoBehaviour
         selectedTarget = enemies[selector];
         Debug.Log(selectedTarget.name);
     }
+
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //find the parent of the collider i hit, then proceed to call the minus health method to subtract the right amount of hp.
+        other.gameObject.GetComponent<EnemyBehavior>().minusHealth(50);
+    }
 }

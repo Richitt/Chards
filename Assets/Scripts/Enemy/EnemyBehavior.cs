@@ -22,12 +22,13 @@ public class EnemyBehavior : MonoBehaviour
     }
     public void minusHealth(int damage){
         this.healthPoints -= damage;
+        Debug.Log("curr health " + this.healthPoints);
     }
     public void plusHealth(int healing){
         this.healthPoints += healing;
+        Debug.Log("curr health " + this.healthPoints);
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("ow!");
     }
 }

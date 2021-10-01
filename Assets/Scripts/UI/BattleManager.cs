@@ -5,12 +5,12 @@ using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
     public GameObject[] enemies;
-    private int selector;
+    // private int selector;
     public GameObject[] players;
     // Start is called before the first frame update
     void Start()
     {
-        selector = -1;
+        //selector = -1;
         foreach (GameObject player in players){
             var p = Instantiate(player);
             p.transform.parent = gameObject.transform;

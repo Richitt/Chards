@@ -134,7 +134,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5870536229332494454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -171,7 +171,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5870536229332494454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -206,6 +206,7 @@ MonoBehaviour:
   timingBar: {fileID: 9075880095278519060, guid: 955ee03de38a9624aa4da8f555484807,
     type: 3}
   slashstart: 0
+  enemies: []
 --- !u!70 &3463273921505174010
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.004012674, y: -0.084266454}
