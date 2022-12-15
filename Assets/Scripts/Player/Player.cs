@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
         //}
         selectedTarget = enemies[selector];
         Debug.Log(selectedTarget.name);
+        Debug.Log("AAAAYOOOO");
     }
 
     
