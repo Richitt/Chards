@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private IEnumerator coroutine;
     public GameObject[] enemies  = new GameObject[0];
     private int selector;
+    private Vector3 startPosition;
 
     private GameObject selectedTarget;
     private string currentAnimation;
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
     }
 
     public void StartAttack(){
+            startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             var myBar = Instantiate(timingBar, new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), Quaternion.identity);
             myBar.transform.parent = gameObject.transform;
     }
@@ -74,6 +76,10 @@ public class Player : MonoBehaviour
         //}
         selectedTarget = enemies[selector];
         Debug.Log(selectedTarget.name);
+    }
+
+    private void returnToStart(){
+        transform.position = startPosition;
     }
 
     

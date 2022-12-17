@@ -19,6 +19,7 @@ public class TimingBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Playero = transform.parent.GetComponent<Player>();
     }
     
     public void receiver(bool yay){
