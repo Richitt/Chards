@@ -21,12 +21,10 @@ public class Card : MonoBehaviour
         }
     }
     public void shift(){
-        Debug.Log("should??");
         transform.position += new Vector3(0.02f, 0, 0);
     }
     
     public void setDistance(int target){
-        Debug.Log("came in here");
         distance = target;
     }
 }
